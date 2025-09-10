@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Logic Circuit Simulator — Full</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Logic Circuit Simulator</h1>
+  </header>
+
+  <main>
+    <aside id="left-panel">
+      <section class="card">
+        <h3>Palette</h3>
+        <div class="palette-grid">
+          <div class="palette-item" draggable="true" data-type="INPUT">INPUT</div>
+          <div class="palette-item" draggable="true" data-type="OUTPUT">OUTPUT</div>
+          <div class="palette-item" draggable="true" data-type="AND">AND</div>
+          <div class="palette-item" draggable="true" data-type="NAND">NAND</div>
+          <div class="palette-item" draggable="true" data-type="OR">OR</div>
+          <div class="palette-item" draggable="true" data-type="NOR">NOR</div>
+          <div class="palette-item" draggable="true" data-type="XOR">XOR</div>
+          <div class="palette-item" draggable="true" data-type="XNOR">XNOR</div>
+          <div class="palette-item" draggable="true" data-type="NOT">NOT</div>
+        </div>
+
+        <div class="controls-row">
+          <button id="btn-run">Run</button>
+          <button id="btn-save">Save</button>
+          <button id="btn-load">Load</button>
+          <button id="btn-undo" disabled>Undo</button>
+          <button id="btn-redo" disabled>Redo</button>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" id="snap-toggle" checked> Snap to grid</label>
+          <label>Grid size <input id="grid-size" type="number" value="16" min="4" style="width:64px"></label>
+          <label><input type="checkbox" id="live-toggle"> Live evaluation</label>
+        </div>
+      </section>
+    </aside>
+
+    <section id="canvas-wrap">
+      <svg id="grid-layer" class="layer"></svg>
+      <svg id="wire-layer" class="layer"></svg>
+      <svg id="gate-layer" class="layer"></svg>
+    </section>
+
+    <aside id="right-panel">
+      <section class="card">
+        <h3>Truth Table (latest)</h3>
+        <table id="truth-table">
+          <thead><tr><th>#</th><th>Inputs</th><th>Outputs</th></tr></thead>
+          <tbody id="tt-body"></tbody>
+        </table>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <small>Drag gate → drop on board. Click an output pin (green) then an input pin (blue) to connect. Double-click INPUT to toggle value.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
