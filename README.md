@@ -103,6 +103,27 @@ Potential future improvements include:
 * Exporting and importing circuit files
 * Improved visual representation of signal states
 
+## Screenshots
+
+### Circuit Workspace
+
+The main workspace allows users to drag and drop logic gates, position them using snap-to-grid, and connect components with interactive wires.
+
+
+### Truth Table
+
+The simulator evaluates the circuit and displays the current inputs and outputs in the truth table.
+
+<img width="1920" height="569" alt="image" src="https://github.com/user-attachments/assets/eb5f543c-4319-4842-bf51-44b8aaaf3cfd" />
+
+
+## Live Demo
+
+**[Open the Logic Circuit Simulator](https://jramkaran98-code.github.io/logic-circuit-simulator/)**
+
+> **Note:** The application is designed for desktop use and is not currently optimized for mobile devices.
+
+
 ## Author
 
 Jeziel Ramkaran
